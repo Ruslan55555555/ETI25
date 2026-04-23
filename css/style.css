@@ -1,7 +1,16 @@
 body {
+    margin: 0;
     background-color: lightgreen;
     line-height: 1.6;
     font-size: 16px;
+}
+header {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: lightblue;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 .hero {
    height: 60vh; 
@@ -10,7 +19,7 @@ body {
    background-position: center;
    display: flex;
    flex-direction: column;
-   justify-content: center;
+   justify-content: center; 
    align-items: center;
    text-align: center;
    color: white;
@@ -23,6 +32,10 @@ body {
 
 h2 {
     color: blue;
+    margin-left: 20px;
+}
+h3 {
+    margin-left: 20px;
 }
 
 .btn {
@@ -38,11 +51,20 @@ h2 {
     font-weight: bold;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    margin-bottom: 20px;
+    margin-left: 20px;
 }
 
 
 .img {
     margin-top: 20px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    padding: 2rem 5%;
 }
 
 footer a {
@@ -67,4 +89,10 @@ footer ul {
     display: flex;
     gap: 15px;
     margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }
